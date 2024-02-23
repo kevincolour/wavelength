@@ -47,6 +47,7 @@ export type PlayersTeams = {
   [playerId: string]: {
     name: string;
     team: Team;
+    guess?: number;
   };
 };
 
@@ -76,6 +77,7 @@ export interface GameState {
   coopBonusTurns: number;
   previousTurn: TurnSummaryModel | null;
   deckLanguage: string | null;
+  allPlayersDone: boolean;
 }
 
 export function InitialGameState(deckLanguage: string): GameState {
@@ -97,5 +99,6 @@ export function InitialGameState(deckLanguage: string): GameState {
     coopBonusTurns: 0,
     previousTurn: null,
     deckLanguage: deckLanguage,
+    allPlayersDone: false
   };
 }

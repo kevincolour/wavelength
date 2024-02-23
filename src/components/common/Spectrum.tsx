@@ -53,7 +53,11 @@ export function Spectrum(props: {
     [n: number]: { style: React.CSSProperties; label: string };
   } = {};
 
-  if (props.targetValue !== undefined) {
+  if (
+    props.targetValue !== undefined &&
+    props.targetValue == props.handleValue
+  ) {
+  } else if (props.targetValue !== undefined) {
     marks[props.targetValue] = {
       style: { fontWeight: "bold", color: "black", cursor: "auto" },
       label: t("spectrum.target"),
@@ -71,10 +75,22 @@ export function Spectrum(props: {
     <div style={{ padding: 8 }}>
       <CenteredColumn style={{ alignItems: "stretch" }}>
         <CenteredRow style={{ justifyContent: "space-between" }}>
-          <div style={{ ...cardBackStyle, backgroundColor: primary, color: primaryText }}>
+          <div
+            style={{
+              ...cardBackStyle,
+              backgroundColor: primary,
+              color: primaryText,
+            }}
+          >
             {props.spectrumCard[0]}
           </div>
-          <div style={{ ...cardBackStyle, backgroundColor: secondary, color: secondaryText }}>
+          <div
+            style={{
+              ...cardBackStyle,
+              backgroundColor: secondary,
+              color: secondaryText,
+            }}
+          >
             {props.spectrumCard[1]}
           </div>
         </CenteredRow>

@@ -33,9 +33,9 @@ export function ActiveGame() {
       {gameState.roundPhase === RoundPhase.CounterGuess && <CounterGuess />}
       {gameState.roundPhase === RoundPhase.ViewScore && <ViewScore />}
       <Scoreboard />
-      {gameState.previousTurn && (
+      {/* {gameState.previousTurn && (
         <PreviousTurnResult {...gameState.previousTurn} />
-      )}
+      )} */}
     </>
   );
 }

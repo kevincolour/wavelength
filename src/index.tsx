@@ -15,10 +15,10 @@ import { firebaseConfig } from "./firebaseConfig";
 import "./i18n";
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics().logEvent("screen_view", {
-  app_name: "Longwave",
-  screen_name: "index",
-});
+// firebase.analytics().logEvent("screen_view", {
+//   app_name: "Longwave",
+//   screen_name: "index",
+// });
 
 ReactDOM.render(
   <React.StrictMode>

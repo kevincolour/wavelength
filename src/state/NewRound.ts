@@ -15,7 +15,11 @@ export function NewRound(
     tSpectrumCards,
     () => {}
   );
-
+  Object.keys(gameState.players).forEach(
+    (key) => {
+        delete gameState.players[key].guess 
+    }
+  )
   const newState: Partial<GameState> = {
     clueGiver: playerId,
     roundPhase: RoundPhase.GiveClue,

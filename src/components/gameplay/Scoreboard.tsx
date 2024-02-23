@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 
 export function Scoreboard() {
   const { t } = useTranslation();
-  const { gameState } = useContext(GameModelContext);
+  const { gameState, clueGiver } = useContext(GameModelContext);
 
   const style = {
     borderTop: "1px solid black",
@@ -26,7 +26,9 @@ export function Scoreboard() {
       <CenteredColumn style={style}>
         <em>{t("scoreboard.free_play")}</em>
         <CenteredRow style={{ flexWrap: "wrap" }}>
-          {Object.keys(gameState.players).map(toPlayerRow)}
+          {Object.keys(gameState.players)
+            .filter((player) => player != clueGiver?.id)
+            .map(toPlayerRow)}
         </CenteredRow>
       </CenteredColumn>
     );
@@ -121,30 +123,23 @@ function PlayerRow(props: { playerId: string }) {
     marginLeft: 4,
     width: 20,
   };
-
+  let styles = {
+    marginLeft: 16,
+    display: "flex",
+    flexFlow: "row",
+    borderBottom: "none",
+  };
+  if (gameState.players[props.playerId].guess) {
+    styles = { ...styles, borderBottom: "1px solid black" };
+  }
   return (
     <div
-      style={{ marginLeft: 16, display: "flex", flexFlow: "row" }}
+      style={styles}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {player.name}
-      {hovered ? (
-        <div
-          style={{
-            ...iconContainerStyle,
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            delete gameState.players[props.playerId];
-            setGameState(gameState);
-          }}
-        >
-          <FontAwesomeIcon icon={faTimesCircle} />
-        </div>
-      ) : (
-        <div style={iconContainerStyle} />
-      )}
+      <div style={iconContainerStyle} />
     </div>
   );
 }

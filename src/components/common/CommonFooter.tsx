@@ -25,16 +25,7 @@ export function CommonFooter() {
         </p>
         {/* we want referrer, so: */}
         {/* eslint-disable-next-line react/jsx-no-target-blank */}
-        <a target="_blank" href="https://www.patreon.com/improvedinitiative">
-          <img
-            alt="Patreon logo"
-            title={t("commonfooter.support_patreon")}
-            src="./Digital-Patreon-Wordmark_FieryCoral.png"
-            style={{ width: "150px", margin: 8 }}
-          />
-        </a>
       </CenteredColumn>
-      <AffiliateLink />
     </CenteredRow>
   );
 }

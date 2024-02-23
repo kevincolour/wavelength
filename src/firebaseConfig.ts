@@ -1,10 +1,10 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyAyPMuIGreq81gLErYeKGkEje851Xdh_kc",
-  authDomain: "wavelength-online.firebaseapp.com",
-  databaseURL: "https://wavelength-online.firebaseio.com",
-  projectId: "wavelength-online",
-  storageBucket: "wavelength-online.appspot.com",
-  messagingSenderId: "811157116454",
-  appId: "1:811157116454:web:be3d3e6b17629700c038e7",
-  measurementId: "G-XZ13S15LMC",
+  apiKey: "AIzaSyBOlTgRRwiSPNJFY66ERhztAmylHGx1uPg",
+  authDomain: "wavelength-57435.firebaseapp.com",
+  projectId: "wavelength-57435",
+  storageBucket: "wavelength-57435.appspot.com",
+  messagingSenderId: "759613809110",
+  appId: "1:759613809110:web:cd9f1f2e69bfed792bc477",
+  measurementId: "G-EL22HVEVTF",
+  databaseURL: "https://wavelength-57435-default-rtdb.firebaseio.com/"
 };

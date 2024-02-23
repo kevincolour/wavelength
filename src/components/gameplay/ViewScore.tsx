@@ -36,12 +36,17 @@ export function ViewScore() {
       gameState.spectrumTarget < gameState.guess) ||
     (gameState.counterGuess === "right" &&
       gameState.spectrumTarget > gameState.guess);
-
+  let total = 0;
+  Object.keys(gameState.players).forEach((key) => {
+    total = total + (gameState.players[key].guess ?? 0);
+  });
+  const avgValue = total / (Object.keys(gameState.players).length - 1);
+  gameState.guess = avgValue;
   return (
     <div>
       <Spectrum
         spectrumCard={spectrumCard}
-        handleValue={gameState.guess}
+        handleValue={avgValue}
         targetValue={gameState.spectrumTarget}
       />
       <CenteredColumn>
@@ -49,9 +54,14 @@ export function ViewScore() {
           {t("viewscore.player_clue", { givername: clueGiver.name })}:{" "}
           <strong>{gameState.clue}</strong>
         </div>
-        <div>
-          {t("viewscore.score")}: {score} {t("viewscore.points")}!
-        </div>
+        {score == 4 ? (
+          <div style={{ borderBottom: "4px solid green" }}>Perfect Score!</div>
+        ) : (
+          <div>
+            {t("viewscore.score")}: {score} {t("viewscore.points")}!
+          </div>
+        )}
+
         {gameState.gameType === GameType.Teams && (
           <div>
             {TeamName(TeamReverse(clueGiver.team), t)} {t("viewscore.got")}{" "}

@@ -63,7 +63,8 @@
     "waiting_guessing_team": "Waiting for {{guessingteam}} to guess...",
     "invite_other_players": "Invite other players to join the game.",
     "share_game_url": "Share this URL with them: {{game_url}}",
-    "guess_for_team": "Submit Guess for {{teamname}}"
+    "guess_for_team": "Submit Guess for {{teamname}}",
+    "guess": "Submit Guess "
   },
   "previousturnresult": {
     "previous_game": "Previous Turn",

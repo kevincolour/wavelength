@@ -12,13 +12,8 @@ import { useTranslation } from "react-i18next";
 
 export function GiveClue() {
   const { t } = useTranslation();
-  const {
-    gameState,
-    localPlayer,
-    clueGiver,
-    spectrumCard,
-    setGameState,
-  } = useContext(GameModelContext);
+  const { gameState, localPlayer, clueGiver, spectrumCard, setGameState } =
+    useContext(GameModelContext);
   const inputElement = useRef<HTMLInputElement>(null);
   const [disableSubmit, setDisableSubmit] = useState(
     !inputElement.current?.value?.length
@@ -81,7 +76,6 @@ export function GiveClue() {
         <CenteredRow>
           <input
             type="text"
-            placeholder={t("giveclue.clue")}
             ref={inputElement}
             onKeyDown={(event) => {
               if (event.key !== "Enter") {
