@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/wavelength/static/css/main.9d5d6bcd.chunk.css",
+    "main.js": "/wavelength/static/js/main.d85fd8b1.chunk.js",
+    "main.js.map": "/wavelength/static/js/main.d85fd8b1.chunk.js.map",
+    "runtime-main.js": "/wavelength/static/js/runtime-main.8e8c51a6.js",
+    "runtime-main.js.map": "/wavelength/static/js/runtime-main.8e8c51a6.js.map",
+    "static/css/2.ab743cdd.chunk.css": "/wavelength/static/css/2.ab743cdd.chunk.css",
+    "static/js/2.c574e95b.chunk.js": "/wavelength/static/js/2.c574e95b.chunk.js",
+    "static/js/2.c574e95b.chunk.js.map": "/wavelength/static/js/2.c574e95b.chunk.js.map",
+    "index.html": "/wavelength/index.html",
+    "static/css/2.ab743cdd.chunk.css.map": "/wavelength/static/css/2.ab743cdd.chunk.css.map",
+    "static/css/main.9d5d6bcd.chunk.css.map": "/wavelength/static/css/main.9d5d6bcd.chunk.css.map",
+    "static/js/2.c574e95b.chunk.js.LICENSE.txt": "/wavelength/static/js/2.c574e95b.chunk.js.LICENSE.txt",
+    "static/media/getFetch.cjs": "/wavelength/static/media/getFetch.5fde86e3.cjs"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e8c51a6.js",
+    "static/css/2.ab743cdd.chunk.css",
+    "static/js/2.c574e95b.chunk.js",
+    "static/css/main.9d5d6bcd.chunk.css",
+    "static/js/main.d85fd8b1.chunk.js"
+  ]
+}
