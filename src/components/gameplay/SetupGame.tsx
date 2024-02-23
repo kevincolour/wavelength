@@ -33,14 +33,6 @@ export function SetupGame() {
       <LongwaveAppTitle />
       <CenteredRow style={{ flexWrap: "wrap" }}>
         <Button
-          text={t("setupgame.standard_game")}
-          onClick={() => startGame(GameType.Teams)}
-        />
-        <Button
-          text={t("setupgame.coop_game")}
-          onClick={() => startGame(GameType.Cooperative)}
-        />
-        <Button
           text={t("setupgame.free_game")}
           onClick={() => startGame(GameType.Freeplay)}
         />
